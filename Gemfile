@@ -57,3 +57,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #including rspec for preferred testing 
 gem 'rspec'
+gem 'rspec-rails'
