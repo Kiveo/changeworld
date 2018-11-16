@@ -18,6 +18,6 @@ RSpec.describe 'Home Page' do
     idea = FactoryBot.create(:idea)
     visit '/'
 
-    expect(page).to have_selector('td', text: 'Picture reference')
+    expect(page).to have_selector('td.pic', text: 'Picture reference')
   end
 end
