@@ -9,6 +9,15 @@ RSpec.describe 'show page', type: :request do
     fill_in 'Picture', with: 'The best image'
     click_button 'Create Idea'
 
-    expect(page).to have_selector('body', text: "Idea was successfully created")
+    expect(page).to have_selector('body', text: 'Idea was successfully created')
+  end
+end
+
+RSpec.describe 'Home Page' do
+  it 'displays newly created ideas' do
+    idea = FactoryBot.create(:idea)
+    visit '/'
+
+    expect(page).to have_selector('td', text: 'Picture reference')
   end
 end
