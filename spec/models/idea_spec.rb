@@ -12,8 +12,7 @@ RSpec.describe Idea, type: :model do
   end
 
   it 'has a picture reference' do
-    idea = Idea.new(picture: "Pic Link")
+    idea = Idea.new(picture: 'Pic Link')
     expect(idea.picture).to eq('Pic Link')
-  end 
-  
+  end
 end
