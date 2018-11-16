@@ -15,7 +15,7 @@
   <tbody>
     <% @ideas.each do |idea| %>
       <tr>
-        <td><%= idea.name %></td>
+        <td class="name"><%= idea.name %></td>
         <td><%= idea.description %></td>
         <td><%= idea.picture %></td>
         <td><%= link_to 'Show', idea %></td>

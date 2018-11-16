@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'home page', type: :request do
+RSpec.describe 'show page', type: :request do
   it 'displays a newly created idea' do
     idea = FactoryBot.create(:idea, name: 'Best Idea', description: 'The best idea, ever!', picture: 'The best image')
     visit '/ideas/new'
@@ -9,6 +9,6 @@ RSpec.describe 'home page', type: :request do
     fill_in 'Picture', with: 'The best image'
     click_button 'Create Idea'
 
-    expect(page).to have_selector('td', text: 'Best Idea')
+    expect(page).to have_selector('body', text: "Idea was successfully created")
   end
 end
