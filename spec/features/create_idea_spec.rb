@@ -1,4 +1,4 @@
-require 'rails-helper'
+require 'rails_helper'
 
 RSpec.describe 'home page', type: :request do
   it 'displays a newly created idea' do
